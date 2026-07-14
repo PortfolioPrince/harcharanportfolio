@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Portfolio \u2014 {{ profile.name }}{% endblock %}
+{% block body_class %}page-portfolio{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero-compact">
+  <div class="container">
+    <p class="eyebrow reveal">Portfolio</p>
+    <h1 class="reveal">{{ total }} projects across branding, social, and performance creative</h1>
+  </div>
+</section>
+
+<section class="section portfolio-browser">
+  <div class="container">
+    <form class="portfolio-controls reveal" method="get" action="{{ url_for('portfolio') }}" id="portfolioForm">
+      <div class="search-box">
+        <input type="search" name="q" id="searchInput" placeholder="Search projects, clients, tags\u2026" value="{{ query }}" aria-label="Search projects">
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button type="button" class="chip {{ 'active' if active_category == 'all' }}" data-category="all">All</button>
+        {% for cat in categories %}
+        <button type="button" class="chip {{ 'active' if active_category == cat }}" data-category="{{ cat }}">{{ cat }}</button>
+        {% endfor %}
+      </div>
+      <input type="hidden" name="category" id="categoryInput" value="{{ active_category }}">
+    </form>
+
+    <div class="portfolio-grid" id="portfolioGrid" data-keyboard-nav>
+      {% for p in projects %}
+      <a href="{{ url_for('project_detail', slug=p.slug) }}"
+         class="portfolio-card reveal"
+         data-tilt
+         style="--d:{{ loop.index0 % 3 }}"
+         data-category="{{ p.category }}"
+         data-title="{{ p.title|lower }}">
+        <div class="portfolio-card-media">
+          <img src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900">
+          <button type="button" class="lightbox-trigger" data-src="{{ p.thumbnail }}" data-title="{{ p.title }}" aria-label="Preview {{ p.title }}">&#10021;</button>
+        </div>
+        <div class="portfolio-card-meta">
+          <span class="portfolio-card-cat">{{ p.category }}</span>
+          <h3>{{ p.title }}</h3>
+          <div class="portfolio-card-tags">
+            {% for tag in p.tags[:2] %}<span>{{ tag }}</span>{% endfor %}
+          </div>
+        </div>
+      </a>
+      {% else %}
+      <p class="empty-state">No projects match that search yet. Try a different keyword or category.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+  <img src="" alt="" id="lightboxImage">
+  <p id="lightboxTitle"></p>
+</div>
+{% endblock %}

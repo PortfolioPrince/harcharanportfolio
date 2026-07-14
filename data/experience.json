@@ -1,0 +1,41 @@
+[
+  {
+    "role": "Lead Graphic & Digital Marketer",
+    "company": "Seabird Education",
+    "period": "2025 \u2014 Present",
+    "location": "Kharar, Punjab",
+    "current": true,
+    "responsibilities": [
+      "Manage Meta Ads campaigns with monthly budgets of \u20b915\u201318 lakh",
+      "Direct graphic design and video production for admissions marketing",
+      "Own campaign optimisation and weekly performance reporting",
+      "Lead generation strategy across the enrolment funnel",
+      "Promoted to Team Leader"
+    ]
+  },
+  {
+    "role": "Brand & Media Designer",
+    "company": "Offshore Marketers",
+    "period": "2024 \u2014 2025",
+    "location": "Remote",
+    "current": false,
+    "responsibilities": [
+      "Designed marketing creatives for international clients",
+      "Built brand identity systems and logo animation",
+      "Produced product visuals for e-commerce and industrial clients",
+      "Clients included LifeMechanical, Trade Academy, VectorGlobe, Watches & Crystal, GreenAppleActive, and CBPA"
+    ]
+  },
+  {
+    "role": "Graphic Designer & Video Editor",
+    "company": "MedSimplified",
+    "period": "2023 \u2014 2024",
+    "location": "Remote",
+    "current": false,
+    "responsibilities": [
+      "Designed graphics and thumbnails for educational content",
+      "Edited instructional video content for a medical-education audience",
+      "Built brand visuals for the channel's growing content library"
+    ]
+  }
+]

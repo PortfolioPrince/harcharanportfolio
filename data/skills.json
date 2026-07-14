@@ -1,0 +1,18 @@
+[
+  {"name": "Photoshop", "level": 95, "group": "Design"},
+  {"name": "Illustrator", "level": 90, "group": "Design"},
+  {"name": "Figma", "level": 75, "group": "Design"},
+  {"name": "Adobe XD", "level": 70, "group": "Design"},
+  {"name": "InDesign", "level": 65, "group": "Design"},
+  {"name": "Canva", "level": 90, "group": "Design"},
+  {"name": "After Effects", "level": 80, "group": "Motion"},
+  {"name": "Premiere Pro", "level": 85, "group": "Motion"},
+  {"name": "Meta Ads Manager", "level": 92, "group": "Marketing"},
+  {"name": "Google Ads", "level": 65, "group": "Marketing"},
+  {"name": "Campaign Optimization", "level": 88, "group": "Marketing"},
+  {"name": "Lead Generation", "level": 85, "group": "Marketing"},
+  {"name": "SEO", "level": 60, "group": "Marketing"},
+  {"name": "Brand Identity", "level": 88, "group": "Strategy"},
+  {"name": "Content Strategy", "level": 80, "group": "Strategy"},
+  {"name": "Social Media Marketing", "level": 85, "group": "Strategy"}
+]
