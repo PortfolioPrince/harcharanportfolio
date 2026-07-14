@@ -1,4 +1,4 @@
-# Harcharan Singh \u2014 Portfolio Website
+# Harcharan Singh  Portfolio Website
 
 A dynamic Flask portfolio site for a Graphic Designer & Digital Marketer (Meta Ads Specialist).
 Content lives in JSON files, not in the HTML, so you can add projects, skills, and testimonials
