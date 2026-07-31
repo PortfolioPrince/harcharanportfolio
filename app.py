@@ -28,7 +28,7 @@ PROFILE = {
     "behance": "",
     "instagram": "",
     "availability": "Open to select freelance & full-time roles",
-    "resume_pdf": "/static/files/Harcharan_Singh_Resume.pdf",
+    "resume_pdf": "https://drive.google.com/file/d/1JGz4_8SeQmbe-Iwc__qb901GeOGyPBgA/view?usp=sharing",
     "ad_budget_managed": "₹15–18L / month",
     "education": "MBA in Digital Marketing & Business Analytics",
     "profile_image": "/static/images/media/media11.jpg",
