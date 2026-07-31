@@ -33,7 +33,7 @@ PROFILE = {
     "resume_pdf": "/static/files/Harcharan_Singh_Resume.pdf",
     "ad_budget_managed": "\u20b915\u201318L / month",
     "education": "MBA in Digital Marketing & Business Analytics",
-    "profile_image": "/static/Portfolio-20260713T112036Z-2-001/Portfolio/media0.jpeg",
+    "profile_image": "/static/images/media/media11.jpg",
 }
 
 

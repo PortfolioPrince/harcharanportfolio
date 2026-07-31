@@ -12,13 +12,9 @@
       <h1 class="reveal">{{ project.title }}</h1>
       <p class="project-hero-desc reveal">{{ project.description }}</p>
     </div>
-   <div class="project-hero-media reveal">
-  {% if project.project_url %}
-    <iframe src="{{ project.project_url }}" width="1600" height="900" allow="autoplay" allowfullscreen style="border:0;"></iframe>
-  {% else %}
-    <img src="{{ project.thumbnail }}" alt="{{ project.title }}" width="1600" height="900">
-  {% endif %}
-</div>
+    <div class="project-hero-media reveal">
+      <img src="{{ project.thumbnail }}" alt="{{ project.title }}" width="1600" height="900">
+    </div>
   </section>
 
   <section class="section project-specs">

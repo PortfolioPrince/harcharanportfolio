@@ -13,7 +13,32 @@
 
 <section class="section contact-body">
   <div class="container contact-grid">
-   
+    <form class="contact-form reveal" method="post" action="{{ url_for('contact') }}">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="budget">Project budget (optional)</label>
+        <select id="budget" name="budget">
+          <option value="">Select a range</option>
+          <option value="under-25k">Under \u20b925,000</option>
+          <option value="25k-1l">\u20b925,000 \u2013 \u20b91,00,000</option>
+          <option value="1l-5l">\u20b91,00,000 \u2013 \u20b95,00,000</option>
+          <option value="5l-plus">\u20b95,00,000+</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-large" data-magnetic>Send Message</button>
+    </form>
+
     <aside class="contact-info reveal">
       <div class="contact-info-item">
         <span class="eyebrow">Email</span>
