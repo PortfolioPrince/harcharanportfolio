@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Admin Login{% endblock %}
+{% block content %}
+<section class="section admin-login">
+  <div class="container">
+    <p class="eyebrow reveal">Admin</p>
+    <h1 class="reveal">Sign in</h1>
+    <form class="admin-login-form reveal" method="post">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autofocus>
+      <button type="submit" class="btn btn-primary" data-magnetic>Sign In</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

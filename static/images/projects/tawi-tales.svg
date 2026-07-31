@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g2dd8b95c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8B84B"/>
+      <stop offset="100%" stop-color="#F5D488"/>
+    </linearGradient>
+    <linearGradient id="g2dd8b95cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E14"/>
+      <stop offset="100%" stop-color="#12151F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g2dd8b95cbg)"/>
+  <circle cx="936.0" cy="198.0" r="384.0" fill="url(#g2dd8b95c)" opacity="0.22"/>
+  <circle cx="180.0" cy="765.0" r="264.0" fill="url(#g2dd8b95c)" opacity="0.14"/>
+  <text x="96.0" y="558.0" font-family="Space Grotesk, Arial, sans-serif" font-size="270.0" font-weight="700" fill="url(#g2dd8b95c)">TT</text>
+  <text x="96.0" y="702.0" font-family="JetBrains Mono, monospace" font-size="40.5" letter-spacing="3" fill="#8890A6">MOTION GRAPHICS</text>
+  <rect x="96.0" y="738.0" width="168.00000000000003" height="3" fill="url(#g2dd8b95c)"/>
+</svg>

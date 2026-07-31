@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}About \u2014 {{ profile.name }}{% endblock %}
+{% block body_class %}page-about{% endblock %}
+
+{% block content %}
+<section class="page-hero about-hero">
+  <div class="container about-hero-grid">
+    <div class="about-hero-copy">
+      <p class="eyebrow reveal">About</p>
+      <h1 class="reveal">Design first. Then I learned to read the numbers.</h1>
+      <p class="page-hero-lead reveal">
+        I'm {{ profile.name }}, a {{ profile.title }} based in {{ profile.location }}. I started
+        as a graphic designer and moved into digital marketing because I kept wanting to know
+        what happened to my designs after they shipped &mdash; did the ad convert, did the post
+        get saved, did the landing page hold the click. Now I do both.
+      </p>
+      <p class="page-hero-lead reveal">
+        I'm currently pursuing an <strong>MBA in Digital Marketing &amp; Business Analytics</strong>
+        alongside my design and ad-ops work &mdash; not to move away from the creative side, but to
+        put a sharper analytical frame around it: reading a campaign's numbers the way I'd read a
+        layout, and treating the brief and the dashboard as one job, not two.
+      </p>
+    </div>
+
+    <div class="about-portrait reveal" style="--d:1">
+      <div class="about-portrait-frame">
+        <img src="{{ profile.profile_image }}" alt="Portrait of {{ profile.name }}" width="640" height="760">
+      </div>
+      <div class="credential-tag">
+        <span class="credential-tag-label">Currently pursuing</span>
+        <strong>MBA</strong>
+        <span class="credential-tag-sub">Digital Marketing &amp; Business Analytics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section philosophy">
+  <div class="container two-col">
+    <div class="reveal">
+      <p class="eyebrow">Creative Philosophy</p>
+      <h2>Design that has to perform isn't a compromise</h2>
+      <p>Most of my work sits at the point where a design decision meets a performance
+      metric &mdash; a headline that has to read in half a second on a phone, a colour
+      that has to survive a thumbnail crop, a layout that has to convert, not just look
+      finished on a Friday. I treat that constraint as the brief, not an obstacle to it.</p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Design Process</p>
+      <ol class="process-list">
+        <li><span>01</span>Understand the audience and the funnel stage the work sits in</li>
+        <li><span>02</span>Sketch and test the smallest version that could work</li>
+        <li><span>03</span>Build the full system \u2014 not just the one hero asset</li>
+        <li><span>04</span>Ship, watch the data, and revise the losing variant</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section timeline-section">
+  <div class="container">
+    <p class="eyebrow reveal">Career Timeline</p>
+    <h2 class="reveal">{{ profile.experience_years }} years, three teams, one throughline</h2>
+
+    <div class="timeline">
+      {% for job in experience %}
+      <div class="timeline-item reveal">
+        <div class="timeline-marker {{ 'current' if job.current }}"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>{{ job.role }}</h3>
+            <span class="timeline-period">{{ job.period }}</span>
+          </div>
+          <p class="timeline-company">{{ job.company }} &mdash; {{ job.location }}</p>
+          <ul>
+            {% for r in job.responsibilities %}
+            <li>{{ r }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section skills-preview">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Skills</p>
+        <h2 class="reveal">Tools I reach for, without exaggeration</h2>
+      </div>
+    </div>
+    <div class="skills-grid">
+      {% for s in skills %}
+      <div class="skill-card reveal" style="--d:{{ loop.index0 % 4 }}">
+        <div class="skill-card-top">
+          <span>{{ s.name }}</span>
+          <span class="skill-group">{{ s.group }}</span>
+        </div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-level="{{ s.level }}"></div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section band-industries">
+  <div class="container">
+    <p class="eyebrow reveal">Industries</p>
+    <div class="industry-tags reveal">
+      <span>Education</span><span>Healthcare SaaS</span><span>Logistics Tech</span>
+      <span>Apparel &amp; E-commerce</span><span>Finance</span><span>Industrial</span>
+      <span>Media &amp; Entertainment</span>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="container cta-inner reveal">
+    <a href="{{ url_for('resume') }}" class="btn btn-outline" data-magnetic>View interactive resume</a>
+    <a href="{{ profile.resume_pdf }}" class="btn btn-primary" download data-magnetic>Download Resume</a>
+  </div>
+</section>
+{% endblock %}

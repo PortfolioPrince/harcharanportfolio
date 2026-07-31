@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<section class="section admin-dashboard">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Admin</p>
+        <h1 class="reveal">Manage Projects</h1>
+      </div>
+      <a href="{{ url_for('admin_logout') }}" class="link-arrow reveal">Log out &rarr;</a>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-list reveal">
+        <h2>Existing projects ({{ projects|length }})</h2>
+        <table class="admin-table">
+          <thead><tr><th>Title</th><th>Category</th><th>Featured</th><th></th></tr></thead>
+          <tbody>
+            {% for p in projects %}
+            <tr>
+              <td><a href="{{ url_for('project_detail', slug=p.slug) }}" target="_blank">{{ p.title }}</a></td>
+              <td>{{ p.category }}</td>
+              <td>
+                <form method="post" action="{{ url_for('admin_toggle_featured', project_id=p.id) }}">
+                  <button type="submit" class="chip {{ 'active' if p.featured }}">{{ 'Yes' if p.featured else 'No' }}</button>
+                </form>
+              </td>
+              <td>
+                <form method="post" action="{{ url_for('admin_delete_project', project_id=p.id) }}" onsubmit="return confirm('Delete this project?');">
+                  <button type="submit" class="btn btn-outline btn-small">Delete</button>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="admin-form reveal">
+        <h2>Add a project</h2>
+        <form method="post" action="{{ url_for('admin_add_project') }}">
+          <div class="form-row"><label>Title</label><input type="text" name="title" required></div>
+          <div class="form-row"><label>Category</label>
+            <select name="category">
+              <option>Branding</option><option>Social Media Design</option><option>Advertising Creatives</option>
+              <option>Marketing Campaigns</option><option>Print Design</option>
+              <option>Posters</option><option>Reels &amp; Video Thumbnails</option><option>Motion Graphics</option>
+              <option>Website Designs</option><option>Logo Designs</option><option>Case Studies</option>
+            </select>
+          </div>
+          <div class="form-row"><label>Client</label><input type="text" name="client"></div>
+          <div class="form-row"><label>Industry</label><input type="text" name="industry"></div>
+          <div class="form-row"><label>Short description</label><textarea name="description" rows="2"></textarea></div>
+          <div class="form-row"><label>Overview</label><textarea name="overview" rows="2"></textarea></div>
+          <div class="form-row"><label>Problem</label><textarea name="problem" rows="2"></textarea></div>
+          <div class="form-row"><label>Solution</label><textarea name="solution" rows="2"></textarea></div>
+          <div class="form-row"><label>Process</label><textarea name="process" rows="2"></textarea></div>
+          <div class="form-row"><label>Outcome</label><textarea name="outcome" rows="2"></textarea></div>
+          <div class="form-row"><label>Tools used (comma separated)</label><input type="text" name="software"></div>
+          <div class="form-row"><label>Deliverables (comma separated)</label><input type="text" name="deliverables"></div>
+          <div class="form-row"><label>Tags (comma separated)</label><input type="text" name="tags"></div>
+          <div class="form-row"><label>Thumbnail path</label><input type="text" name="thumbnail" placeholder="/static/images/projects/your-image.svg"></div>
+          <div class="form-row"><label>Date (YYYY-MM)</label><input type="text" name="date"></div>
+          <div class="form-row checkbox"><label><input type="checkbox" name="featured"> Feature on homepage</label></div>
+          <button type="submit" class="btn btn-primary">Add Project</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

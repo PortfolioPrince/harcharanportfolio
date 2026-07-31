@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Brand Identity",
+    "icon": "brand",
+    "description": "Logos, colour systems, and type rules built to survive contact with an app icon, a print run, and a pitch deck alike."
+  },
+  {
+    "title": "Graphic Design",
+    "icon": "design",
+    "description": "Static design for print, product, and digital \u2014 posters, product sheets, decks, and everything in between."
+  },
+  {
+    "title": "Social Media Design",
+    "icon": "social",
+    "description": "Feed systems, carousels, and story templates that hold together across a month of posting, not just one hero image."
+  },
+  {
+    "title": "Meta Ads Management",
+    "icon": "ads",
+    "description": "Campaign structure, budget pacing, and creative testing across Meta's ad platform, run against a real cost-per-lead target."
+  },
+  {
+    "title": "Creative Strategy",
+    "icon": "strategy",
+    "description": "The thinking layer before the design layer \u2014 audience, message, and format decisions made before a single pixel is placed."
+  },
+  {
+    "title": "Performance Marketing",
+    "icon": "performance",
+    "description": "Full-funnel creative and targeting built around measurable outcomes: leads, cost-per-result, and return on ad spend."
+  },
+  {
+    "title": "Video Editing & Motion",
+    "icon": "video",
+    "description": "Reels, ad cutdowns, and animated logo idents edited for retention on the first three seconds."
+  },
+  {
+    "title": "UI / Landing Page Design",
+    "icon": "ui",
+    "description": "Conversion-focused landing pages and product screens designed to match the campaign that sends the click."
+  },
+  {
+    "title": "Marketing Consultation",
+    "icon": "consult",
+    "description": "A working session on your current funnel, creative, and spend \u2014 with a clear list of what to fix first."
+  }
+]
