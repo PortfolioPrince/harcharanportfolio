@@ -1,11 +1,10 @@
 import json
 import os
 from datetime import datetime
-from functools import wraps
 
 from flask import (
     Flask, render_template, jsonify, request,
-    redirect, url_for, session, flash, abort
+    redirect, url_for, flash, abort
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -14,11 +13,10 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
-ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "harcharan2026")
 
 PROFILE = {
     "name": "Harcharan Singh",
-    "title": "Graphic Designer & Digital Marketer",
+    "title": "Performance marketer & Graphic Designer",
     "subtitle": "Meta Ads Specialist",
     "tagline": "I design the creative and run the numbers behind it.",
     "experience_years": "3+",
@@ -31,7 +29,7 @@ PROFILE = {
     "instagram": "",
     "availability": "Open to select freelance & full-time roles",
     "resume_pdf": "/static/files/Harcharan_Singh_Resume.pdf",
-    "ad_budget_managed": "\u20b915\u201318L / month",
+    "ad_budget_managed": "₹15–18L / month",
     "education": "MBA in Digital Marketing & Business Analytics",
     "profile_image": "/static/images/media/media11.jpg",
 }
@@ -94,19 +92,6 @@ def inject_globals():
         "current_year": datetime.now().year,
         "nav_categories": get_categories(),
     }
-
-
-# ---------------------------------------------------------------------------
-# Admin auth helper
-# ---------------------------------------------------------------------------
-
-def admin_required(view):
-    @wraps(view)
-    def wrapped(*args, **kwargs):
-        if not session.get("is_admin"):
-            return redirect(url_for("admin_login", next=request.path))
-        return view(*args, **kwargs)
-    return wrapped
 
 
 # ---------------------------------------------------------------------------
@@ -208,31 +193,8 @@ def resume():
     return render_template("resume.html", experience=experience, skills=skills)
 
 
-@app.route("/contact", methods=["GET", "POST"])
+@app.route("/contact")
 def contact():
-    if request.method == "POST":
-        name = request.form.get("name", "").strip()
-        email = request.form.get("email", "").strip()
-        message = request.form.get("message", "").strip()
-        budget = request.form.get("budget", "").strip()
-
-        if not name or not email or not message:
-            flash("Please fill in your name, email, and message.", "error")
-            return redirect(url_for("contact"))
-
-        submissions = load_data("submissions") if os.path.exists(_path("submissions")) else []
-        submissions.append({
-            "name": name,
-            "email": email,
-            "message": message,
-            "budget": budget,
-            "received_at": datetime.now().isoformat(timespec="seconds"),
-        })
-        save_data("submissions", submissions)
-
-        flash("Thanks \u2014 your message is in. I'll reply within a day or two.", "success")
-        return redirect(url_for("contact"))
-
     return render_template("contact.html")
 
 
@@ -252,95 +214,6 @@ def api_project(slug):
         return jsonify({"error": "not found"}), 404
     return jsonify(project)
 
-
-# ---------------------------------------------------------------------------
-# Admin (simple password-protected dashboard)
-# ---------------------------------------------------------------------------
-
-@app.route("/admin/login", methods=["GET", "POST"])
-def admin_login():
-    if request.method == "POST":
-        password = request.form.get("password", "")
-        if password == ADMIN_PASSWORD:
-            session["is_admin"] = True
-            next_url = request.args.get("next") or url_for("admin_dashboard")
-            return redirect(next_url)
-        flash("Incorrect password.", "error")
-    return render_template("admin_login.html")
-
-
-@app.route("/admin/logout")
-def admin_logout():
-    session.pop("is_admin", None)
-    return redirect(url_for("admin_login"))
-
-
-@app.route("/admin")
-@admin_required
-def admin_dashboard():
-    return render_template("admin_dashboard.html", projects=get_projects())
-
-
-@app.route("/admin/project/add", methods=["POST"])
-@admin_required
-def admin_add_project():
-    projects = get_projects()
-    title = request.form.get("title", "").strip()
-    if not title:
-        flash("Title is required.", "error")
-        return redirect(url_for("admin_dashboard"))
-
-    slug = title.lower().replace(" ", "-").replace("/", "-")
-    slug = "".join(c for c in slug if c.isalnum() or c == "-")
-    new_id = max([p["id"] for p in projects], default=0) + 1
-
-    project = {
-        "id": new_id,
-        "slug": slug,
-        "title": title,
-        "category": request.form.get("category", "Branding"),
-        "tags": [t.strip() for t in request.form.get("tags", "").split(",") if t.strip()],
-        "description": request.form.get("description", ""),
-        "overview": request.form.get("overview", ""),
-        "problem": request.form.get("problem", ""),
-        "solution": request.form.get("solution", ""),
-        "process": request.form.get("process", ""),
-        "outcome": request.form.get("outcome", ""),
-        "thumbnail": request.form.get("thumbnail") or "/static/images/projects/placeholder.svg",
-        "gallery": [request.form.get("thumbnail") or "/static/images/projects/placeholder.svg"],
-        "client": request.form.get("client", ""),
-        "industry": request.form.get("industry", ""),
-        "software": [s.strip() for s in request.form.get("software", "").split(",") if s.strip()],
-        "date": request.form.get("date", datetime.now().strftime("%Y-%m")),
-        "deliverables": [d.strip() for d in request.form.get("deliverables", "").split(",") if d.strip()],
-        "featured": bool(request.form.get("featured")),
-        "project_url": request.form.get("project_url", ""),
-    }
-    projects.append(project)
-    save_data("projects", projects)
-    flash(f'"{title}" added.', "success")
-    return redirect(url_for("admin_dashboard"))
-
-
-@app.route("/admin/project/delete/<int:project_id>", methods=["POST"])
-@admin_required
-def admin_delete_project(project_id):
-    projects = get_projects()
-    projects = [p for p in projects if p["id"] != project_id]
-    save_data("projects", projects)
-    flash("Project deleted.", "success")
-    return redirect(url_for("admin_dashboard"))
-
-
-@app.route("/admin/project/toggle-featured/<int:project_id>", methods=["POST"])
-@admin_required
-def admin_toggle_featured(project_id):
-    projects = get_projects()
-    for p in projects:
-        if p["id"] == project_id:
-            p["featured"] = not p.get("featured", False)
-    save_data("projects", projects)
-    return redirect(url_for("admin_dashboard"))
 
 
 # ---------------------------------------------------------------------------

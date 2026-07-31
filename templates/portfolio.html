@@ -14,7 +14,7 @@
   <div class="container">
     <form class="portfolio-controls reveal" method="get" action="{{ url_for('portfolio') }}" id="portfolioForm">
       <div class="search-box">
-        <input type="search" name="q" id="searchInput" placeholder="Search projects, clients, tags\u2026" value="{{ query }}" aria-label="Search projects">
+        <input type="search" name="q" id="searchInput" placeholder="Search projects, clients, tags…" value="{{ query }}" aria-label="Search projects">
       </div>
       <div class="filter-chips" id="filterChips">
         <button type="button" class="chip {{ 'active' if active_category == 'all' }}" data-category="all">All</button>
