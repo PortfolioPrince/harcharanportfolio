@@ -43,33 +43,6 @@
   </div>
 </section>
 
-<section class="section featured-work">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow reveal">Selected Work</p>
-        <h2 class="reveal">Design that ships, campaigns that convert</h2>
-      </div>
-      <a href="{{ url_for('portfolio') }}" class="link-arrow reveal">See full portfolio &rarr;</a>
-    </div>
-
-    <div class="work-grid">
-      {% for p in featured_projects %}
-      <a href="{{ url_for('project_detail', slug=p.slug) }}" class="work-card reveal" data-tilt style="--d:{{ loop.index0 % 3 }}">
-        <div class="work-card-media">
-          <img src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900">
-        </div>
-        <div class="work-card-meta">
-          <span class="work-card-cat">{{ p.category }}</span>
-          <h3>{{ p.title }}</h3>
-          <span class="work-card-client">{{ p.client }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="section showreel-section">
   <div class="container">
     <div class="section-head">
@@ -93,6 +66,33 @@
       <button type="button" class="showreel-play" id="showreelPlay" aria-label="Play showreel">
         <span class="showreel-play-icon">&#9658;</span>
       </button>
+    </div>
+  </div>
+</section>
+
+<section class="section featured-work">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Selected Work</p>
+        <h2 class="reveal">Design that ships, campaigns that convert</h2>
+      </div>
+      <a href="{{ url_for('portfolio') }}" class="link-arrow reveal">See full portfolio &rarr;</a>
+    </div>
+
+    <div class="work-grid">
+      {% for p in featured_projects %}
+      <div class="work-card reveal" style="--d:{{ loop.index0 % 3 }}">
+        <div class="work-card-media">
+          <img src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900">
+        </div>
+        <div class="work-card-meta">
+          <span class="work-card-cat">{{ p.category }}</span>
+          <h3>{{ p.title }}</h3>
+          <span class="work-card-client">{{ p.client }}</span>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

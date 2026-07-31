@@ -249,7 +249,7 @@ p{ margin: 0 0 1em; color: var(--text-dim); }
    ========================================================================== */
 .work-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .work-card{ display:block; border-radius: var(--radius-m); overflow:hidden; background: var(--surface); border:1px solid var(--border); transition: transform var(--dur-m) var(--ease), border-color var(--dur-s); }
-.work-card:hover{ transform: translateY(-8px); border-color: rgba(139,143,255,.4); }
+.work-card:hover{ transform: scale(1.03); border-color: rgba(139,143,255,.4); }
 .work-card-media{ aspect-ratio: 4/3; overflow:hidden; }
 .work-card-media img{ width:100%; height:100%; object-fit: cover; transition: transform .6s var(--ease); }
 .work-card:hover .work-card-media img{ transform: scale(1.08); }
@@ -430,7 +430,7 @@ p{ margin: 0 0 1em; color: var(--text-dim); }
 
 .portfolio-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .portfolio-card{ display:block; border-radius: var(--radius-m); overflow:hidden; background: var(--surface); border:1px solid var(--border); transition: transform var(--dur-m) var(--ease), border-color var(--dur-s); }
-.portfolio-card:hover{ transform: translateY(-6px); border-color: rgba(139,143,255,.4); }
+.portfolio-card:hover{ transform: scale(1.03); border-color: rgba(139,143,255,.4); }
 .portfolio-card-media{ position:relative; aspect-ratio: 4/3; overflow:hidden; }
 .portfolio-card-media img{ width:100%; height:100%; object-fit:cover; transition: transform .6s var(--ease); }
 .portfolio-card:hover .portfolio-card-media img{ transform: scale(1.06); }

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ project.title }} \u2014 {{ profile.name }}{% endblock %}
+{% block title %}{{ project.title }} &mdash; {{ profile.name }}{% endblock %}
 {% block description %}{{ project.description }}{% endblock %}
 {% block body_class %}page-project{% endblock %}
 
@@ -62,7 +62,7 @@
       <div class="gallery-grid">
         {% for img in project.gallery %}
         <button type="button" class="gallery-item reveal lightbox-trigger" style="--d:{{ loop.index0 % 3 }}" data-src="{{ img }}" data-title="{{ project.title }}">
-          <img src="{{ img }}" alt="{{ project.title }} \u2014 image {{ loop.index }}" loading="lazy" width="1200" height="900">
+          <img src="{{ img }}" alt="{{ project.title }} &mdash; image {{ loop.index }}" loading="lazy" width="1200" height="900">
         </button>
         {% endfor %}
       </div>

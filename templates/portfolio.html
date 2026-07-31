@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Portfolio \u2014 {{ profile.name }}{% endblock %}
+{% block title %}Portfolio &mdash; {{ profile.name }}{% endblock %}
 {% block body_class %}page-portfolio{% endblock %}
 
 {% block content %}
@@ -27,9 +27,7 @@
 
     <div class="portfolio-grid" id="portfolioGrid" data-keyboard-nav>
       {% for p in projects %}
-      <a href="{{ url_for('project_detail', slug=p.slug) }}"
-         class="portfolio-card reveal"
-         data-tilt
+      <div class="portfolio-card reveal"
          style="--d:{{ loop.index0 % 3 }}"
          data-category="{{ p.category }}"
          data-title="{{ p.title|lower }}">
@@ -44,7 +42,7 @@
             {% for tag in p.tags[:2] %}<span>{{ tag }}</span>{% endfor %}
           </div>
         </div>
-      </a>
+      </div>
       {% else %}
       <p class="empty-state">No projects match that search yet. Try a different keyword or category.</p>
       {% endfor %}

@@ -23,7 +23,7 @@ PROFILE = {
     "tagline": "I design the creative and run the numbers behind it.",
     "experience_years": "3+",
     "company": "Seabird Education",
-    "location": "Kharar, Punjab",
+    "location": "Mohali, Punjab",
     "email": "harcharan038@gmail.com",
     "phone": "+91 8699523208",
     "linkedin": "https://linkedin.com/in/harcharan-singh-6839b1276",

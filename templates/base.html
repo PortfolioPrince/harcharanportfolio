@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}{{ profile.name }} \u2014 {{ profile.title }}{% endblock %}</title>
+<title>{% block title %}{{ profile.name }} &mdash; {{ profile.title }}{% endblock %}</title>
 <meta name="description" content="{% block description %}{{ profile.name }} is a {{ profile.title }} ({{ profile.subtitle }}) helping brands grow through design and performance marketing.{% endblock %}">
 <meta name="theme-color" content="#0B0E14">
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ profile.name }} \u2014 {{ profile.title }}">
+<meta property="og:title" content="{{ profile.name }} &mdash; {{ profile.title }}">
 <meta property="og:description" content="Design and performance marketing that grow brands.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ request.url }}">
@@ -90,7 +90,7 @@
   <div class="container footer-inner">
     <div class="footer-brand">
       <span class="logo-mark">HS</span>
-      <p>Graphic Designer &amp; Digital Marketer, based in {{ profile.location }}. Available for select freelance and full-time work.</p>
+      <p>Performance Marketer &amp; Graphic Designer, based in {{ profile.location }}. Available for select freelance and full-time work.</p>
       <div class="footer-socials">
         <a href="{{ profile.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
         <a href="mailto:{{ profile.email }}" aria-label="Email">Email</a>
@@ -115,7 +115,7 @@
   </div>
 
   <div class="container footer-bottom">
-    <span>&copy; {{ current_year }} {{ profile.name }}. All rights reserved.</span>
+    <span>&copy; {{ current_year }} {{ profile.name }}. All rights reserved. &mdash; A product of Mence AI</span>
     <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr; Top</button>
   </div>
 </footer>
