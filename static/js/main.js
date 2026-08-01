@@ -37,23 +37,16 @@
      Custom cursor
   --------------------------------------------------------------------- */
   const dot = document.getElementById("cursorDot");
-  const ring = document.getElementById("cursorRing");
-  if (dot && ring && !reducedMotion && window.matchMedia("(hover:hover)").matches) {
-    let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+
+  if (dot  && !reducedMotion && window.matchMedia("(hover:hover)").matches) {
+    let  mouseX = 0, mouseY = 0;
     window.addEventListener("mousemove", (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.left = mouseX + "px";
       dot.style.top = mouseY + "px";
     });
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      ring.style.left = ringX + "px";
-      ring.style.top = ringY + "px";
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
+    
 
     document.querySelectorAll("a, button, [data-magnetic]").forEach((el) => {
       el.addEventListener("mouseenter", () => ring.classList.add("is-active"));

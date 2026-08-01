@@ -244,41 +244,6 @@
     "project_url": ""
   },
   {
-    "id": 8,
-    "slug": "greenappleactive-ads",
-    "title": "GreenAppleActive Ad Creative Set",
-    "category": "Marketing Campaigns",
-    "tags": [
-      "Meta Ads",
-      "Campaign Strategy"
-    ],
-    "description": "A full-funnel ad creative set for an international activewear brand, from cold-audience awareness through retargeting.",
-    "overview": "GreenAppleActive needed distinct creative for three funnel stages rather than one ad set spread thin across a whole audience.",
-    "problem": "A single generic ad set was being shown to cold and warm audiences alike, with no message tailored to where the viewer actually was in the funnel.",
-    "solution": "Split creative into three tiers — awareness, consideration, retargeting — with a different message and format for each, sharing one consistent visual system.",
-    "process": "Mapped the existing funnel, identified the message gap at each stage, then built creative sets per stage with clear CTAs matched to intent.",
-    "outcome": "Delivered a structured, stage-matched creative library that replaced the client's single-ad-set approach.",
-    "thumbnail": "/static/images/media/media8.jpg",
-    "gallery": [
-      "/static/images/media/media8.jpg"
-    ],
-    "client": "GreenAppleActive",
-    "industry": "Apparel / E-commerce",
-    "software": [
-      "Photoshop",
-      "Illustrator",
-      "Meta Ads Manager"
-    ],
-    "date": "2024-12",
-    "deliverables": [
-      "Awareness creative set",
-      "Consideration creative set",
-      "Retargeting creative set"
-    ],
-    "featured": false,
-    "project_url": ""
-  },
-  {
     "id": 9,
     "slug": "seabird-landing-page",
     "title": "Seabird Education — Admissions Landing Page",

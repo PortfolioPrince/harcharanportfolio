@@ -16,7 +16,7 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
 PROFILE = {
     "name": "Harcharan Singh",
-    "title": "Performance marketer & Graphic Designer",
+    "title": "Graphic Designer & Digital Marketer",
     "subtitle": "Meta Ads Specialist",
     "tagline": "I design the creative and run the numbers behind it.",
     "experience_years": "3+",
@@ -28,7 +28,7 @@ PROFILE = {
     "behance": "",
     "instagram": "",
     "availability": "Open to select freelance & full-time roles",
-    "resume_pdf": "https://drive.google.com/file/d/1JGz4_8SeQmbe-Iwc__qb901GeOGyPBgA/view?usp=sharing",
+    "resume_pdf": "https://drive.google.com/uc?export=download&id=1JGz4_8SeQmbe-Iwc__qb901GeOGyPBgA",
     "ad_budget_managed": "₹15–18L / month",
     "education": "MBA in Digital Marketing & Business Analytics",
     "profile_image": "/static/images/media/media11.jpg",
