@@ -62,21 +62,27 @@
 
 <section class="section marketing-gallery">
   <div class="container">
-    <p class="eyebrow reveal">Creative Samples</p>
-    <h2 class="reveal">A closer look at the ad creative</h2>
-    <div class="marketing-gallery-grid">
-      <div class="marketing-gallery-item reveal">
-        <img src="/static/images/projects/seabird-ads.svg" alt="Seabird Education ad creative" loading="lazy" width="600" height="600">
-      </div>
-      <div class="marketing-gallery-item reveal">
-        <img src="/static/images/projects/seabird-ads-2.svg" alt="Seabird Education ad creative variant" loading="lazy" width="600" height="600">
-      </div>
-      <div class="marketing-gallery-item reveal">
-        <img src="/static/images/projects/seabird-ads-3.svg" alt="Seabird Education ad creative variant" loading="lazy" width="600" height="600">
-      </div>
-      <div class="marketing-gallery-item reveal">
-        <img src="/static/images/projects/seabird-landing.svg" alt="Seabird Education admissions landing page" loading="lazy" width="600" height="600">
-      </div>
+    <p class="eyebrow reveal">Marketing Results</p>
+    <h2 class="reveal">A closer look at the ad results </h2>
+    <div class="marketing-carousel">
+      <button type="button" class="carousel-arrow carousel-arrow-prev" id="galleryPrev" aria-label="Previous">&#8592;</button>
+      
+        <div class="marketing-carousel-track" id="galleryTrack">
+          <div class="marketing-gallery-item reveal">
+            <img src="/static/Portfolio-20260713T112036Z-2-001/Portfolio/Meta%20Ads%20Result.jpg" alt="Meta Ads campaign result" loading="lazy" width="600" height="600">
+          </div>
+          <div class="marketing-gallery-item reveal">
+            <img src="/static/Portfolio-20260713T112036Z-2-001/Portfolio/Meta%20Ads%20Result%203.jpg" alt="Meta Ads campaign result" loading="lazy" width="600" height="600">
+          </div>
+          <div class="marketing-gallery-item reveal">
+            <img src="/static/Portfolio-20260713T112036Z-2-001/Portfolio/Meta%20Ads%20Result%202.jpg" alt="Meta Ads campaign result" loading="lazy" width="600" height="600">
+          </div>
+          <div class="marketing-gallery-item reveal">
+            <img src="/static/Portfolio-20260713T112036Z-2-001/Portfolio/media%209.png" alt="Meta Ads campaign creative" loading="lazy" width="600" height="600">
+          </div>
+        </div>
+      
+      <button type="button" class="carousel-arrow carousel-arrow-next" id="galleryNext" aria-label="Next">&#8594;</button>
     </div>
   </div>
 </section>
@@ -87,4 +93,18 @@
     <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large" data-magnetic>Talk through your funnel</a>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryTrack = document.getElementById("galleryTrack");
+  const galleryPrev = document.getElementById("galleryPrev");
+  const galleryNext = document.getElementById("galleryNext");
+  if (galleryTrack && galleryPrev && galleryNext) {
+    const step = () => galleryTrack.clientWidth;
+    galleryPrev.addEventListener("click", () => galleryTrack.scrollBy({ left: -step(), behavior: "smooth" }));
+    galleryNext.addEventListener("click", () => galleryTrack.scrollBy({ left: step(), behavior: "smooth" }));
+  }
+});
+</script>
 {% endblock %}
+

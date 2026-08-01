@@ -14,10 +14,10 @@
     "solution": "Designed a geometric wordmark with a custom-cut 'P' monogram that doubles as a UI tile, so the same mark scales from a 16px favicon to a signage-sized wall logo without redrawing.",
     "process": "Explored 14 monogram directions, tested legibility at favicon size first (mobile-in reverse), then built the full type system around the two survivors before client review.",
     "outcome": "Approved on the first formal round; the mark is now live across the product's web app, onboarding emails, and App Store listing.",
-    "thumbnail": "/static/images/media/media1.jpg",
+    "thumbnail": "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (11).png",
+    "thumbnail_fit": "contain",
     "gallery": [
-      "/static/images/media/media1.jpg",
-      "/static/images/media/media13.jpg"
+      "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (11).png"
     ],
     "client": "PracticePanel",
     "industry": "Healthcare SaaS",
@@ -50,7 +50,7 @@
     "solution": "Built a short kinetic-type sequence with a paper-texture wipe and a river-motif line animation, referencing the Tawi river the series is named after.",
     "process": "Storyboarded the beat-by-beat motion in Illustrator, then animated and rendered in After Effects, timing the reveal to a 6-second broadcast-safe cut.",
     "outcome": "Now used as the channel's fixed cold-open across every episode, with viewers recognising the ident within the first watch-through.",
-    "thumbnail": "/static/images/media/media2.jpg",
+    "video_embed": "https://drive.google.com/file/d/1whRutVXMu4h9M6Gwe1hL96P8FiPSmoB9/preview",
     "gallery": [
       "/static/images/media/media2.jpg"
     ],
@@ -85,11 +85,12 @@
     "solution": "Created a modular thumbnail template — fixed type hierarchy, consistent diagram style, single accent colour per subject — so any new upload could be built in minutes and still look like the same channel.",
     "process": "Audited 40+ existing uploads, identified the three best-performing layouts, then rebuilt them into a locked template with swappable diagram slots.",
     "outcome": "Rolled out across the channel's weekly upload schedule as the standing visual system for thumbnails and end-cards.",
-    "thumbnail": "/static/images/media/media3.jpg",
+    "thumbnail":              "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\Youtube Thumbnail Designs\\1.jpg",
+    "thumbnail_fit": "contain",
     "gallery": [
-      "/static/images/media/media3.jpg"
+      "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\Youtube Thumbnail Designs\\1.jpg"
     ],
-    "client": "MedSimplified",
+    "client": "Self",
     "industry": "Education",
     "software": [
       "Photoshop",
@@ -108,7 +109,7 @@
     "id": 4,
     "slug": "lifemechanical-brand",
     "title": "LifeMechanical Product Visuals",
-    "category": "Print Design",
+    "category": "Posters",
     "tags": [
       "Product Visuals",
       "Print"
@@ -119,11 +120,12 @@
     "solution": "Built a standard product-shot layout with consistent lighting direction, callout system for specs, and a print-safe colour profile for offset runs.",
     "process": "Worked directly with the client's product photos, re-composited backgrounds and callouts, then proofed a CMYK-safe version before print.",
     "outcome": "Adopted as the standard format for the client's product catalogue and trade-show handouts.",
-    "thumbnail": "/static/images/media/media4.jpg",
+    "thumbnail": "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media18.png",
+    "thumbnail_fit": "contain",
     "gallery": [
-      "/static/images/media/media4.jpg"
+      "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media18.png"
     ],
-    "client": "LifeMechanical",
+    "client": "Self",
     "industry": "Industrial / Manufacturing",
     "software": [
       "Photoshop",
@@ -139,9 +141,9 @@
   },
   {
     "id": 5,
-    "slug": "trade-academy-social",
-    "title": "Trade Academy Social Series",
-    "category": "Social Media Design",
+    "slug": "Nike",
+    "title": "Nike Shoes",
+    "category": "Product Design",
     "tags": [
       "Social Media",
       "Carousel Design"
@@ -152,12 +154,12 @@
     "solution": "Designed a repeatable carousel grid with a fixed number of words per slide, a single chart-style diagram per concept, and a consistent close-out CTA slide.",
     "process": "Reviewed engagement drop-off on past carousels slide-by-slide, then rebuilt the format around the slide where most readers left.",
     "outcome": "Completion rate on new carousels improved noticeably against the channel's prior format.",
-    "thumbnail": "/static/images/media/media5.jpg",
+    "thumbnail": "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (13).png",
+    "thumbnail_fit": "contain",
     "gallery": [
-      "/static/images/media/media5.jpg",
-      "/static/images/media/media14.jpg"
+      "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (13).png" 
     ],
-    "client": "Trade Academy",
+    "client": "Self",
     "industry": "Finance & Education",
     "software": [
       "Illustrator",
@@ -175,7 +177,7 @@
   {
     "id": 6,
     "slug": "vectorglobe-rebrand",
-    "title": "VectorGlobe Brand Refresh",
+    "title": "AI Cricket Video",
     "category": "Branding",
     "tags": [
       "Rebrand",
@@ -187,11 +189,11 @@
     "solution": "Simplified the mark to a single-weight vector form, defined a two-colour system for light and dark contexts, and built a small motion-logo variant for app splash screens.",
     "process": "Audited every existing use of the old mark, then rebuilt from the smallest required size upward.",
     "outcome": "Rolled out across the client's app, site, and partner-facing documents as the current standard mark.",
-    "thumbnail": "/static/images/media/media6.jpg",
-    "gallery": [
-      "/static/images/media/media6.jpg"
-    ],
-    "client": "VectorGlobe",
+
+
+    "video_embed": "https://drive.google.com/file/d/1bXX4-hmOczCkxOHvIFMLLEE7VbjOhTPe/preview",
+   
+    "client": "Seabird Education",
     "industry": "Logistics Technology",
     "software": [
       "Illustrator",
@@ -208,9 +210,9 @@
   },
   {
     "id": 7,
-    "slug": "seabird-lead-gen-creatives",
-    "title": "Seabird Education — Lead Generation Creatives",
-    "category": "Advertising Creatives",
+    "slug": "seabird",
+    "title": "Avatar Video ",
+    "category": "AI Reel",
     "tags": [
       "Meta Ads",
       "Lead Generation",
@@ -222,7 +224,8 @@
     "solution": "Built a rotating library of static and short-video ad creatives structured around 4 tested hooks, with a consistent brand frame so the ads still read as one campaign even as the creative churned.",
     "process": "Ran weekly creative testing cycles, tracked CTR and cost-per-lead per creative, and rebuilt the losing variants using the winning hook structure.",
     "outcome": "Sustained a healthy cost-per-lead across a ₹15–18 lakh monthly Meta ad budget while keeping creative fatigue in check through weekly refreshes.",
-    "thumbnail": "/static/images/media/media7.jpg",
+  
+    "video_embed": "https://drive.google.com/file/d/1XYLBuShlW5UWJBAo8AE7lXdaS7T0iXhG/preview",
     "gallery": [
       "/static/images/media/media7.jpg",
       "/static/images/media/media15.jpg"
@@ -245,9 +248,9 @@
   },
   {
     "id": 9,
-    "slug": "seabird-landing-page",
-    "title": "Seabird Education — Admissions Landing Page",
-    "category": "Website Designs",
+    "slug": "seabird",
+    "title": "AI Bike Race Reel",
+    "category": "AI Video",
     "tags": [
       "Landing Page",
       "Conversion Design"
@@ -258,7 +261,8 @@
     "solution": "Designed a single-scroll landing page with one form, one CTA repeated at anchor points, and messaging that mirrored the ad creative that sent the click.",
     "process": "Matched landing page headline and imagery directly to each top-performing ad variant so the click-to-landing experience felt continuous.",
     "outcome": "Improved form-submission rate against the previous general-website destination.",
-    "thumbnail": "/static/images/media/media9.jpg",
+    
+    "video_embed": "https://drive.google.com/file/d/1sczRKx-XeB8ZY4EN0ltqa5Tc43z-rTjc/preview",
     "gallery": [
       "/static/images/media/media9.jpg"
     ],
@@ -280,7 +284,7 @@
   {
     "id": 10,
     "slug": "cbpa-poster-series",
-    "title": "CBPA Event Poster Series",
+    "title": "Car Poster ",
     "category": "Posters",
     "tags": [
       "Print",
@@ -292,9 +296,10 @@
     "solution": "Built one modular poster template with swappable colour, date, and speaker-photo slots so any new event could go from brief to print-ready in under an hour.",
     "process": "Standardised the type hierarchy and grid first, then tested the template against three very different event types to confirm it held up.",
     "outcome": "Adopted as the standing template for the association's event calendar.",
-    "thumbnail": "/static/images/media/media10.jpg",
+    "thumbnail": "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (17).png",
+    "thumbnail_fit": "contain",
     "gallery": [
-      "/static/images/media/media10.jpg"
+      "\\static\\Portfolio-20260713T112036Z-2-001\\Portfolio\\media (17).png"
     ],
     "client": "CBPA",
     "industry": "Professional Association",

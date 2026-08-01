@@ -32,8 +32,12 @@
          data-category="{{ p.category }}"
          data-title="{{ p.title|lower }}">
         <div class="portfolio-card-media">
-          <img src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900">
+          {% if p.video_embed %}
+          <iframe src="{{ p.video_embed }}" allow="autoplay" loading="lazy" title="{{ p.title }}"></iframe>
+          {% else %}
+          <img src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900" style="object-fit: {{ p.thumbnail_fit or 'cover' }};">
           <button type="button" class="lightbox-trigger" data-src="{{ p.thumbnail }}" data-title="{{ p.title }}" aria-label="Preview {{ p.title }}">&#10021;</button>
+          {% endif %}
         </div>
         <div class="portfolio-card-meta">
           <span class="portfolio-card-cat">{{ p.category }}</span>

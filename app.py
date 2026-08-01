@@ -31,7 +31,9 @@ PROFILE = {
     "resume_pdf": "https://drive.google.com/uc?export=download&id=1JGz4_8SeQmbe-Iwc__qb901GeOGyPBgA",
     "ad_budget_managed": "₹15–18L / month",
     "education": "MBA in Digital Marketing & Business Analytics",
-    "profile_image": "/static/images/media/media11.jpg",
+    "profile_image": "/static/Portfolio-20260713T112036Z-2-001/Portfolio/media0.jpeg",
+    "main_image": "/static/Portfolio-20260713T112036Z-2-001/Portfolio/mainstrip.png" ,
+    "data_image": "/static/Portfolio-20260713T112036Z-2-001/Portfolio/maindata.jpeg"
 }
 
 

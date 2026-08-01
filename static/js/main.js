@@ -37,20 +37,10 @@
      Custom cursor
   --------------------------------------------------------------------- */
   const dot = document.getElementById("cursorDot");
-
-  if (dot  && !reducedMotion && window.matchMedia("(hover:hover)").matches) {
-    let  mouseX = 0, mouseY = 0;
+  if (dot && !reducedMotion && window.matchMedia("(hover:hover)").matches) {
     window.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = mouseX + "px";
-      dot.style.top = mouseY + "px";
-    });
-    
-
-    document.querySelectorAll("a, button, [data-magnetic]").forEach((el) => {
-      el.addEventListener("mouseenter", () => ring.classList.add("is-active"));
-      el.addEventListener("mouseleave", () => ring.classList.remove("is-active"));
+      dot.style.left = e.clientX + "px";
+      dot.style.top = e.clientY + "px";
     });
   }
 
@@ -70,7 +60,17 @@
       });
     });
   }
-
+  /* ---------------------------------------------------------------------
+     Marketing gallery carousel
+  --------------------------------------------------------------------- */
+  const galleryTrack = document.getElementById("galleryTrack");
+  const galleryPrev = document.getElementById("galleryPrev");
+  const galleryNext = document.getElementById("galleryNext");
+  if (galleryTrack && galleryPrev && galleryNext) {
+    const step = () => galleryTrack.clientWidth;
+    galleryPrev.addEventListener("click", () => galleryTrack.scrollBy({ left: -step(), behavior: "smooth" }));
+    galleryNext.addEventListener("click", () => galleryTrack.scrollBy({ left: step(), behavior: "smooth" }));
+  }
   /* ---------------------------------------------------------------------
      Page transition curtain (internal navigation)
   --------------------------------------------------------------------- */
@@ -329,19 +329,6 @@
       { threshold: 0.4 }
     );
     chartLines.forEach((line) => chartIo.observe(line));
-  }
-
-  /* ---------------------------------------------------------------------
-     Showreel play button
-  --------------------------------------------------------------------- */
-  const showreelVideo = document.getElementById("showreelVideo");
-  const showreelPlay = document.getElementById("showreelPlay");
-  if (showreelVideo && showreelPlay) {
-    showreelPlay.addEventListener("click", () => {
-      showreelVideo.play();
-    });
-    showreelVideo.addEventListener("play", () => showreelPlay.classList.add("is-hidden"));
-    showreelVideo.addEventListener("pause", () => showreelPlay.classList.remove("is-hidden"));
   }
 
   /* ---------------------------------------------------------------------
